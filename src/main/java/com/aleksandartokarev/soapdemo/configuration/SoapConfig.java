@@ -18,7 +18,7 @@ public class SoapConfig {
     @Bean
     public SoapConnector soapConnector(Jaxb2Marshaller marshaller) {
         SoapConnector client = new SoapConnector();
-        client.setDefaultUri("https://ws.partner.efsllc.com/axis2/services/CardManagementWS/");
+        client.setDefaultUri("https://www.w3schools.com/xml/tempconvert.asmx");
         client.setMarshaller(marshaller);
         client.setUnmarshaller(marshaller);
         return client;
