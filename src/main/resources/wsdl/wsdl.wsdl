@@ -1878,8 +1878,8 @@
             <complexType name="getTransactionsExt">
                 <sequence>
                     <element name="clientId" type="string"/>
-                    <element name="begDate" type="dateTime"/>
-                    <element name="endDate" type="dateTime"/>
+                    <element name="begDate" type="string"/>
+                    <element name="endDate" type="string"/>
                 </sequence>
             </complexType>
             <complexType name="getTransactionsExtResponse">
@@ -1899,6 +1899,14 @@
                     <element name="result" type="ns5:WSMoneyCodeHistRecArrayV2"/>
                 </sequence>
             </complexType>
+            <complexType name="logout">
+                <sequence>
+                    <element name="clientId" type="string"/>
+                </sequence>
+            </complexType>
+            <complexType name="logoutResponse">
+            </complexType>
+
         </schema>
     </types>
     <message name="CardManagementEP_getMCTransExtLocResponse">

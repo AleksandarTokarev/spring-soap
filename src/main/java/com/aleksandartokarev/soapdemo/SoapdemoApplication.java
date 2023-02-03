@@ -2,6 +2,7 @@ package com.aleksandartokarev.soapdemo;
 
 import com.aleksandartokarev.soapdemo.configuration.SoapConnector;
 import com.aleksandartokarev.soapdemo.soapclient.generated.*;
+import org.apache.juli.logging.Log;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -43,6 +44,11 @@ public class SoapdemoApplication {
 				GetMoneyCodesV2Response getMoneyCodesV2Response = (GetMoneyCodesV2Response)
 						soapConnector.callWebService("", getMoneyCodesV2);
 				System.out.println(getMoneyCodesV2Response.getResult());
+
+				Logout logout = new Logout();
+				logout.setClientId(response.getResult());
+				LogoutResponse logoutResponse = (LogoutResponse) soapConnector.callWebService("", logout);
+				System.out.println("DONE");
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
 			}
