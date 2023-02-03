@@ -1,4 +1,12 @@
-<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns5="http://com.tch.cards.service/types/arrays/com/tch/cards/model" xmlns:tns="http://com.tch.cards.service" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://com.tch.cards.service/types" xmlns:ns4="http://com.tch.cards.service/types/arrays/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns3="http://com.tch.cards.service/types/arrays/java/lang" name="CardManagementWS" targetNamespace="http://com.tch.cards.service">
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:ns5="http://com.tch.cards.service/types/arrays/com/tch/cards/model"
+             xmlns:tns="http://com.tch.cards.service"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             xmlns:ns2="http://com.tch.cards.service/types"
+             xmlns:ns4="http://com.tch.cards.service/types/arrays/"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:ns3="http://com.tch.cards.service/types/arrays/java/lang" name="CardManagementWS" 
+             targetNamespace="http://com.tch.cards.service">
     <types>
         <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:soap11-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://com.tch.cards.service/types" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://com.tch.cards.service/types">
             <import namespace="http://com.tch.cards.service/types/arrays/com/tch/cards/model"/>
@@ -1857,6 +1865,18 @@
                 </sequence>
             </complexType>
         </schema>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:com="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap11-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://com.tch.cards.service/types/arrays/com/tch/cards/model" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="com">
+            <import namespace="http://com.tch.cards.service/types/arrays/"/>
+            <import namespace="http://com.tch.cards.service/types/arrays/java/lang"/>
+            <import namespace="http://com.tch.cards.service/types"/>
+            <complexType name="login">
+                <sequence>
+                    <element name="user" type="string"/>
+                    <element name="password" type="string"/>
+                </sequence>
+            </complexType>
+        </schema>
+
     </types>
     <message name="CardManagementEP_getMCTransExtLocResponse">
         <part name="result" type="ns5:WSMCTransExtLocArray"> </part>

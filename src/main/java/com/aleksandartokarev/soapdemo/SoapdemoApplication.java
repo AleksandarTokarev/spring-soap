@@ -1,6 +1,7 @@
 package com.aleksandartokarev.soapdemo;
 
 import com.aleksandartokarev.soapdemo.configuration.SoapConnector;
+import com.aleksandartokarev.soapdemo.soapclient.generated.Login;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,7 +19,10 @@ public class SoapdemoApplication {
 		return args -> {
 			//TODO code for calling
 
-			soapConnector.callWebService("",new Object());
+			Login login = new Login();
+			login.setUser("username");
+			login.setPassword("pas");
+			soapConnector.callWebService("CardManagementEP_login", login);
 		};
 	}
 
