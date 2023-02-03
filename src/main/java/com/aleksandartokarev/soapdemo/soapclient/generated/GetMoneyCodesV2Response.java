@@ -8,23 +8,20 @@
 
 package com.aleksandartokarev.soapdemo.soapclient.generated;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
- * <p>Java class for WSTransactionCarmsStmt complex type.
+ * <p>Java class for getMoneyCodesV2Response complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="WSTransactionCarmsStmt"&gt;
+ * &lt;complexType name="getMoneyCodesV2Response"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="statementId" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="result" type="{http://com.tch.cards.service/types/arrays/com/tch/cards/model}WSMoneyCodeHistRecArrayV2"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -33,37 +30,35 @@ import javax.xml.bind.annotation.XmlType;
  * 
  * 
  */
+@XmlRootElement(name = "getMoneyCodesV2Response", namespace = "http://com.tch.cards.service")
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "WSTransactionCarmsStmt", propOrder = {
-    "statementId"
-})
-public class WSTransactionCarmsStmt {
+public class GetMoneyCodesV2Response {
 
     @XmlElement(required = true)
-    protected String statementId;
+    protected WSMoneyCodeHistRecArrayV2 result;
 
     /**
-     * Gets the value of the statementId property.
+     * Gets the value of the result property.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link WSMoneyCodeHistRecArrayV2 }
      *     
      */
-    public String getStatementId() {
-        return statementId;
+    public WSMoneyCodeHistRecArrayV2 getResult() {
+        return result;
     }
 
     /**
-     * Sets the value of the statementId property.
+     * Sets the value of the result property.
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link WSMoneyCodeHistRecArrayV2 }
      *     
      */
-    public void setStatementId(String value) {
-        this.statementId = value;
+    public void setResult(WSMoneyCodeHistRecArrayV2 value) {
+        this.result = value;
     }
 
 }

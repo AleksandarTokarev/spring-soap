@@ -8,25 +8,22 @@
 
 package com.aleksandartokarev.soapdemo.soapclient.generated;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
- * <p>Java class for WSMetaData complex type.
+ * <p>Java class for getMoneyCodesV2 complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="WSMetaData"&gt;
+ * &lt;complexType name="getMoneyCodesV2"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="typeId" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="metaData" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="clientId" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="begDate" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="endDate" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -35,91 +32,87 @@ import javax.xml.bind.annotation.XmlType;
  * 
  * 
  */
+@XmlRootElement(name = "getMoneyCodesV2", namespace = "http://com.tch.cards.service")
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "WSMetaData", propOrder = {
-    "typeId",
-    "metaData",
-    "description"
-})
-public class WSMetaData {
+public class GetMoneyCodesV2 {
 
     @XmlElement(required = true)
-    protected String typeId;
-    @XmlElement(required = true, nillable = true)
-    protected String metaData;
-    @XmlElement(required = true, nillable = true)
-    protected String description;
+    protected String clientId;
+    @XmlElement(required = true)
+    protected String begDate;
+    @XmlElement(required = true)
+    protected String endDate;
 
     /**
-     * Gets the value of the typeId property.
+     * Gets the value of the clientId property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getTypeId() {
-        return typeId;
+    public String getClientId() {
+        return clientId;
     }
 
     /**
-     * Sets the value of the typeId property.
+     * Sets the value of the clientId property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setTypeId(String value) {
-        this.typeId = value;
+    public void setClientId(String value) {
+        this.clientId = value;
     }
 
     /**
-     * Gets the value of the metaData property.
+     * Gets the value of the begDate property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getMetaData() {
-        return metaData;
+    public String getBegDate() {
+        return begDate;
     }
 
     /**
-     * Sets the value of the metaData property.
+     * Sets the value of the begDate property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setMetaData(String value) {
-        this.metaData = value;
+    public void setBegDate(String value) {
+        this.begDate = value;
     }
 
     /**
-     * Gets the value of the description property.
+     * Gets the value of the endDate property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDescription() {
-        return description;
+    public String getEndDate() {
+        return endDate;
     }
 
     /**
-     * Sets the value of the description property.
+     * Sets the value of the endDate property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDescription(String value) {
-        this.description = value;
+    public void setEndDate(String value) {
+        this.endDate = value;
     }
 
 }

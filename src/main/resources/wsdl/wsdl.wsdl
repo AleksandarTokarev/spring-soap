@@ -1864,19 +1864,42 @@
                     <element maxOccurs="unbounded" minOccurs="0" name="infos" nillable="true" type="ns2:WSMonCodesInfo"/>
                 </sequence>
             </complexType>
-        </schema>
-        <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:com="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap11-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://com.tch.cards.service/types/arrays/com/tch/cards/model" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="com">
-            <import namespace="http://com.tch.cards.service/types/arrays/"/>
-            <import namespace="http://com.tch.cards.service/types/arrays/java/lang"/>
-            <import namespace="http://com.tch.cards.service/types"/>
             <complexType name="login">
                 <sequence>
                     <element name="user" type="string"/>
                     <element name="password" type="string"/>
                 </sequence>
             </complexType>
+            <complexType name="loginResponse">
+                <sequence>
+                    <element name="result" type="string"/>
+                </sequence>
+            </complexType>
+            <complexType name="getTransactionsExt">
+                <sequence>
+                    <element name="clientId" type="string"/>
+                    <element name="begDate" type="dateTime"/>
+                    <element name="endDate" type="dateTime"/>
+                </sequence>
+            </complexType>
+            <complexType name="getTransactionsExtResponse">
+                <sequence>
+                    <element name="result" type="ns5:WSTransactionExtArray"/>
+                </sequence>
+            </complexType>
+            <complexType name="getMoneyCodesV2">
+                <sequence>
+                    <element name="clientId" type="string"/>
+                    <element name="begDate" type="string"/>
+                    <element name="endDate" type="string"/>
+                </sequence>
+            </complexType>
+            <complexType name="getMoneyCodesV2Response">
+                <sequence>
+                    <element name="result" type="ns5:WSMoneyCodeHistRecArrayV2"/>
+                </sequence>
+            </complexType>
         </schema>
-
     </types>
     <message name="CardManagementEP_getMCTransExtLocResponse">
         <part name="result" type="ns5:WSMCTransExtLocArray"> </part>
